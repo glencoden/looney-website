@@ -1,0 +1,38 @@
+:root {
+    --black: #000;
+    --white: #fff;
+    --pink: deeppink;
+    --yellow: yellow;
+    --beige: lemonchiffon;
+
+    --bg-color: var(--beige);
+    --padding: 20px;
+
+    --nav-height: 80px;
+    --nav-top: none;
+    --nav-bottom: 0;
+
+    --level-1: 10;
+    --level-2: 100;
+    --level-3: 1000;
+
+    --main-content-width: 640px;
+    --video-width: auto;
+    --video-height: calc(100vh - 2 * var(--nav-height));
+}
+
+@media only screen and (min-width: 600px) {
+    :root {
+        --nav-height: min(120px, 16vh);
+        --nav-top: 0;
+        --nav-bottom: none;
+
+        --video-width: min(1280px, 100vw);
+        --video-height: auto;
+    }
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background-color: var(--bg-color);
+}

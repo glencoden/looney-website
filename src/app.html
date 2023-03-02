@@ -3,44 +3,8 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name='viewport' content='width=device-width, initial-scale=1'/>
 		%sveltekit.head%
-
-		<style>
-			:root {
-				--black: #000;
-				--white: #fff;
-				--pink: deeppink;
-				--yellow: yellow;
-				--beige: lemonchiffon;
-
-				--bg-color: var(--beige);
-
-				--main-content-width: 640px;
-				--padding: 20px;
-				
-				--nav-height: 60px;
-				--nav-top: none;
-				--nav-bottom: 0;
-
-				--level-1: 10;
-				--level-2: 100;
-				--level-3: 1000;
-			}
-
-			@media only screen and (min-width: 600px) {
-				:root {
-					--nav-height: 120px;
-					--nav-top: 0;
-					--nav-bottom: none;
-				}
-			}
-
-			body {
-				font-family: "DM Sans", sans-serif;
-				background-color: var(--bg-color);
-			}
-		</style>
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
