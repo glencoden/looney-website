@@ -13,12 +13,32 @@
 				--pink: deeppink;
 				--yellow: yellow;
 				--beige: lemonchiffon;
+
+				--bg-color: var(--beige);
+
+				--main-content-width: 640px;
+				--padding: 20px;
+				
+				--nav-height: 60px;
+				--nav-top: none;
+				--nav-bottom: 0;
+
+				--level-1: 10;
+				--level-2: 100;
+				--level-3: 1000;
+			}
+
+			@media only screen and (min-width: 600px) {
+				:root {
+					--nav-height: 120px;
+					--nav-top: 0;
+					--nav-bottom: none;
+				}
 			}
 
 			body {
 				font-family: "DM Sans", sans-serif;
-				background-color: var(--beige);
-
+				background-color: var(--bg-color);
 			}
 		</style>
 	</head>

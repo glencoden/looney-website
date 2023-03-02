@@ -2,10 +2,7 @@
     import Button from './Button.svelte'
 </script>
 
-<div>
-    <a href='/'>
-        <Button label='Home' />
-    </a>
+<div class="navigation">
     <a href='/events'>
         <Button label='Events' />
     </a>
@@ -19,3 +16,39 @@
         <Button label='Contact' />
     </a>
 </div>
+
+<div class="logo">
+    <a href='/'>
+        <h1>LT</h1>
+    </a>
+</div>
+
+<style>
+    .logo {
+        z-index: var(--level-3);
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: var(--nav-height);
+        height: var(--nav-height);
+    }
+
+    .navigation {
+        z-index: var(--level-3);
+        position: fixed;
+        left: 50%;
+        top: var(--nav-top);
+        bottom: var(--nav-bottom);
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--padding);
+        width: 100vw;
+        height: var(--nav-height);
+        background-color: var(--bg-color);
+    }
+</style>

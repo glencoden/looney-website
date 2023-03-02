@@ -32,11 +32,22 @@
 
 {:else}
 
-    <InputText bind:value={name} />
-    <InputText bind:value={email} />
-    <InputText bind:value={subject} />
-    <InputText bind:value={message} />
+    <div class="contact-form">
+        <InputText bind:value={name} />
+        <InputText bind:value={email} />
+        <InputText bind:value={subject} />
+        <InputText bind:value={message} />
 
-    <Button label="submit" onClick={onSubmit} />
+        <Button label="submit" onClick={onSubmit} />
+    </div>
 
 {/if}
+
+<style>
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--padding);
+    }
+</style>
