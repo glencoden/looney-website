@@ -6,7 +6,7 @@
     <a href='/'>
         <Button label='Home' />
     </a>
-    <a href='/dates'>
+    <a href='/events'>
         <Button />
     </a>
 </div>
