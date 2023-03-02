@@ -3,19 +3,18 @@
     import InputText from '../../components/InputText.svelte'
     import Button from '../../components/Button.svelte'
 
-    let name = 'name'
     let email = 'email'
-    let subject = 'subject'
-    let message = 'message'
+    let name = 'name'
+    let content = 'content'
 
-    const { error, isLoading, post } = usePost('')
+    const { error, isLoading, post } = usePost('https://5o2bjifmql.execute-api.us-east-1.amazonaws.com/dev/email/send')
 
     const onSubmit = () => {
         post({
             name,
             email,
-            subject,
-            message,
+            content,
+            page: 'looneys', // identify this website to serverless contact form
         })
     }
 </script>
@@ -35,8 +34,7 @@
     <div class="contact-form">
         <InputText bind:value={name} />
         <InputText bind:value={email} />
-        <InputText bind:value={subject} />
-        <InputText bind:value={message} />
+        <InputText bind:value={content} />
 
         <Button label="submit" onClick={onSubmit} />
     </div>

@@ -15,7 +15,8 @@ export default function (url: string) {
                 method: 'POST',
                 body,
             })
-            await response.json()
+            const result = await response.json()
+            console.log('POST result', result)
         } catch (err) {
             error.set(typeof err === 'object' ? err : { err })
         }
