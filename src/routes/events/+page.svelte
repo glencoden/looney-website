@@ -1,5 +1,5 @@
 <script>
-    import format from 'date-fns/format'
+    import format from 'date-fns/format/index'
     import useGet from '../../utils/useGet.ts'
 
     const { data, error, isLoading } = useGet('https://staging.api.looneytunez.de/calendar/events')
