@@ -1,12 +1,17 @@
 :root {
     --black: #000;
     --white: #fff;
-    --pink: deeppink;
-    --yellow: yellow;
-    --beige: lemonchiffon;
+    --blue: #0C5EF0;
+    --blue-dark: #1045A3;
+    --yellow: #F0EC00;
+    --pink: #DD137B;
+    --pink-dark: #A3105C;
+    /*--beige: lemonchiffon;*/
 
-    --bg-color: var(--beige);
-    --padding: 20px;
+    --bg-color: var(--yellow);
+    --font-color: var(--black);
+
+    --padding: 20; /* number for calculations */
 
     --nav-height: 80px;
     --nav-top: none;
@@ -23,7 +28,7 @@
 
 @media only screen and (min-width: 600px) {
     :root {
-        --nav-height: min(120px, 16vh);
+        --nav-height: min(160px, 16vh);
         --nav-top: 0;
         --nav-bottom: none;
 
@@ -34,5 +39,17 @@
 
 body {
     font-family: "DM Sans", sans-serif;
+    color: var(--font-color);
     background-color: var(--bg-color);
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0;
+    border: none;
+    color: var(--font-color);
+    background-color: transparent;
 }

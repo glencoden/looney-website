@@ -19,7 +19,7 @@
     <pre>{JSON.stringify($data, null, 2)}</pre>
 
 {:else}
-    {#each $data.data.songs as song (`${song.artist}${song.title}`)}
+    {#each $data.data.songs as song (song.id)}
         {#if song.artist.length > 0 && song.title.length > 0}
 
             <p><strong>{song.artist}</strong> {song.title}</p>

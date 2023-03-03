@@ -46,6 +46,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: var(--padding);
+        gap: calc(var(--padding) * 1px);
     }
 </style>

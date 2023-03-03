@@ -19,7 +19,7 @@
 
 <div class="logo">
     <a href='/'>
-        <img src="logo-black.png" alt="black">
+        <img src="logo.png" alt="black">
     </a>
 </div>
 
@@ -46,7 +46,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: var(--padding);
+        gap: calc(2 * var(--padding) * 1px);
         width: 120vw;
         height: var(--nav-height);
         background-color: var(--bg-color);
