@@ -32,8 +32,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: var(--nav-height);
-        height: var(--nav-height);
+        /*width: var(--nav-height);*/
+        /*height: var(--nav-height);*/
+    }
+
+    .logo img {
+        width: 400px;
     }
 
     .navigation {

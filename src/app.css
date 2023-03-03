@@ -5,7 +5,8 @@
     --blue-dark: #1045A3;
     --yellow: #F0EC00;
     --pink: #DD137B;
-    --pink-dark: #A3105C;
+    /*--pink-dark: #A3105C;*/
+    --pink-dark: #8C2744;
     /*--beige: lemonchiffon;*/
 
     --bg-color: var(--yellow);
@@ -38,7 +39,7 @@
 }
 
 body {
-    font-family: "DM Sans", sans-serif;
+    font-family: Poppins, sans-serif;
     color: var(--font-color);
     background-color: var(--bg-color);
 }

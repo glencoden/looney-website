@@ -4,7 +4,7 @@
     const { data, error, isLoading } = useGet('https://staging.api.looneytunez.de/repertoire/published')
 </script>
 
-<h2>SONGS</h2>
+<h2 class="artist-name">SONGS</h2>
 
 {#if $isLoading}
 
@@ -22,8 +22,16 @@
     {#each $data.data.songs as song (song.id)}
         {#if song.artist.length > 0 && song.title.length > 0}
 
-            <p><strong>{song.artist}</strong> {song.title}</p>
+            <p><strong class="artist-name">{song.artist}</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{song.title}</p>
 
         {/if}
     {/each}
 {/if}
+
+<style>
+    .artist-name {
+        font-family: "Playfair Display SC", sans-serif;
+        font-weight: 700;
+        color: var(--pink);
+    }
+</style>
