@@ -9,7 +9,6 @@
 
 <style>
     .video {
-        z-index: var(--level-2);
         position: fixed;
         left: 50%;
         top: var(--nav-height);

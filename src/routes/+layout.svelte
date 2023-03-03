@@ -6,7 +6,9 @@
 <div class="viewport">
     <Navigation />
 
-    <h1 class="japanese">ライブカラオケ</h1>
+    <img class="spotlight" src="city.svg" alt="spotlight">
+
+    <h1 class="japanese">ライブ❤カラオケ!</h1>
 
     <div class="main-content">
         <div class="vertical-spacer"></div>
@@ -41,6 +43,16 @@
         font-family: 'Noto Sans JP', sans-serif;
         font-weight: 900;
         font-size: 172px;
+        margin: 0;
         color: var(--white);
+        filter: blur(5px);
+    }
+
+    .spotlight {
+        position: fixed;
+        right: 0;
+        top: var(--nav-height);
+        height: 60vh;
+        filter: blur(5px);
     }
 </style>
