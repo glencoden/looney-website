@@ -13,7 +13,22 @@
 </div>
 
 <style>
+    @keyframes slide-in {
+        0% {
+            transform: translate(-50%, 100%);
+        }
+
+        25% {
+            transform: translate(-50%, 100%);
+        }
+
+        100% {
+            transform: translate(-50%, 0);
+        }
+    }
+
     .video-box {
+        animation: slide-in 0.7s ease;
         position: fixed;
         left: 50%;
         top: var(--nav-height);
