@@ -11,6 +11,9 @@
     const { error, isLoading, post } = usePost('https://5o2bjifmql.execute-api.us-east-1.amazonaws.com/dev/email/send')
 
     const onSubmit = () => {
+        if (!name || !email || !content) {
+            return
+        }
         post({
             name,
             email,

@@ -1,5 +1,12 @@
 <script>
+    import { navigating } from '$app/stores';
     import Button from './Button.svelte'
+
+    let currentPathname = ''
+
+    $: if($navigating) {
+        currentPathname = $navigating.to.route.id
+    }
 </script>
 
 <div class="navigation-background"></div>
@@ -13,16 +20,28 @@
 
 <div class="navigation">
     <a href='/events'>
-        <Button label='Events' />
+        <Button
+            isActive={currentPathname === '/events'}
+            label='Events'
+        />
     </a>
     <a href='/songs'>
-        <Button isActive={true} label='Songs' />
+        <Button
+            isActive={currentPathname === '/songs'}
+            label='Songs'
+        />
     </a>
     <a href='/references'>
-        <Button label='References' />
+        <Button
+            isActive={currentPathname === '/references'}
+            label='References'
+        />
     </a>
     <a href='/contact'>
-        <Button label='Contact' />
+        <Button
+            isActive={currentPathname === '/contact'}
+            label='Contact'
+        />
     </a>
 </div>
 
