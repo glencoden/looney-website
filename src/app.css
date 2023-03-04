@@ -5,14 +5,18 @@
     --blue-dark: #1045A3;
     --yellow: #F0EC00;
     --pink: #DD137B;
-    /*--pink-dark: #A3105C;*/
     --pink-dark: #8C2744;
-    /*--beige: lemonchiffon;*/
 
     --bg-color: var(--yellow);
     --font-color: var(--black);
 
+    --font-size-m: 18px;
+    --font-size-l: 30px;
+
     --padding: 20; /* number for calculations */
+    --border-width: 4px;
+    --boder-radius: 10px;
+    --box-shadow: calc(0.4 * var(--padding) * 1px) calc(0.4 * var(--padding) * 1px) 0 0 var(--black);
 
     --nav-height: 80px;
     --nav-top: none;
@@ -22,7 +26,7 @@
     --level-2: 100;
     --level-3: 1000;
 
-    --main-content-width: 640px;
+    --main-content-width: 600px;
     --video-width: auto;
     --video-height: calc(100vh - 2 * var(--nav-height));
 }
@@ -36,6 +40,10 @@
         --video-width: min(1280px, 100vw);
         --video-height: auto;
     }
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {

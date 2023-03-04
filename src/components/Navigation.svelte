@@ -6,7 +6,8 @@
 
 <div class="logo">
     <a href='/'>
-        <img src="logo.png" alt="black">
+        <img class="logo-shadow" src="logo-black.png" alt="black">
+        <img class="logo-image" src="logo.png" alt="black">
     </a>
 </div>
 
@@ -15,7 +16,7 @@
         <Button label='Events' />
     </a>
     <a href='/songs'>
-        <Button label='Songs' />
+        <Button isActive={true} label='Songs' />
     </a>
     <a href='/references'>
         <Button label='References' />
@@ -35,6 +36,19 @@
         justify-content: center;
         align-items: center;
         transform: rotate(-10deg);
+    }
+
+    .logo-image {
+        position: relative;
+    }
+
+    .logo-shadow {
+        position: absolute;
+        left: 49%;
+        top: 51%;
+        transform: translate(-50%, -50%);
+        filter: blur(5px);
+        opacity: 0.5;
     }
 
     .logo img {

@@ -4,11 +4,13 @@
 </script>
 
 <div class="viewport">
+    <h1 class="hidden-headline">Live Rock Karaoke</h1>
+
     <Navigation />
 
     <img class="spotlight" src="city.svg" alt="spotlight">
 
-    <h1 class="japanese">ライブ❤カラオケ!</h1>
+    <h2 class="japanese">ライブ❤カラオケ!</h2>
 
     <div class="main-content">
         <div class="vertical-spacer"></div>
@@ -20,6 +22,12 @@
 </div>
 
 <style>
+    .hidden-headline {
+        position: fixed;
+        opacity: 0;
+        user-select: none;
+    }
+
     .viewport {
         display: flex;
         justify-content: center;
@@ -29,11 +37,10 @@
     .main-content {
         position: relative;
         width: var(--main-content-width);
-        overflow: hidden;
     }
 
     .vertical-spacer {
-        height: var(--nav-height);
+        height: calc(var(--nav-height) + calc(4 * var(--padding) * 1px));
     }
 
     .japanese {
@@ -46,6 +53,7 @@
         margin: 0;
         color: var(--white);
         filter: blur(5px);
+        opacity: 0.8;
     }
 
     .spotlight {
@@ -54,5 +62,6 @@
         top: var(--nav-height);
         height: 60vh;
         filter: blur(5px);
+        opacity: 0.8;
     }
 </style>

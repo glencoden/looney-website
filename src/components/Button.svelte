@@ -1,10 +1,12 @@
 <script>
+    export let isActive = false
     export let label = 'no label'
     export let onClick = undefined
 </script>
 
 <button
     class="button"
+    class:button-active={isActive}
     on:click={typeof onClick === 'function' && onClick()}
 >
     {label.toUpperCase()}
@@ -29,14 +31,30 @@
     }
 
     .button {
-        font-size: 30px;
+        font-family: Poppins, sans-serif;
+        font-size: var(--font-size-l);
         font-weight: 600;
         padding: calc(var(--padding) * 1px);
-        border: 4px solid var(--black);
-        box-shadow: calc(0.5 * var(--padding) * 1px) calc(0.5 * var(--padding) * 1px) 0 0 var(--black);
-        color: var(--white);
+        border: var(--border-width) solid var(--black);
+        box-shadow: var(--box-shadow);
+        color: var(--blue);
         background-color: var(--blue-dark);
-        animation: flicker 1.5s infinite alternate;
         overflow: hidden;
+        transition: transform 0.1s ease;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+    }
+
+    button:active {
+        transform: scale(1);
+        color: var(--white);
+        animation: flicker 1.5s infinite alternate;
+    }
+
+    .button-active {
+        color: var(--white);
+        animation: flicker 1.5s infinite alternate;
     }
 </style>
