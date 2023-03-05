@@ -25,8 +25,22 @@
 
 <div class="logo">
     <a href='/'>
-        <img class="logo-shadow" src="logo-white.png" alt="black">
-        <img class="logo-image" src="logo.png" alt="black">
+        <img
+            class="logo-shadow"
+            src="logo-black.png"
+            alt="black"
+        >
+        <img
+            class="logo-image"
+            src="logo.png"
+            alt="main"
+        >
+        <img
+            class="logo-glow"
+            class:logo-glow-active={currentPathname === '/'}
+            src="logo-white.png"
+            alt="glow"
+        >
     </a>
 </div>
 
@@ -58,6 +72,15 @@
 </div>
 
 <style>
+    @keyframes flicker {
+        0%, 18%, 22%, 25%, 53%, 57%, 100% {
+            opacity: 0.5;
+        }
+        20%, 24%, 55% {
+            opacity: 0;
+        }
+    }
+
     .logo {
         z-index: var(--level-3);
         position: fixed;
@@ -75,11 +98,24 @@
 
     .logo-shadow {
         position: absolute;
-        left: 49%;
+        left: 51%;
         top: 51%;
         transform: translate(-50%, -50%);
-        filter: blur(5px);
-        opacity: 0.5;
+        filter: blur(1px);
+        opacity: 0.9;
+    }
+
+    .logo-glow {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        filter: blur(10px);
+        opacity: 0;
+    }
+
+    .logo-glow:hover, .logo-glow:active, .logo-glow-active {
+        animation: flicker 1.5s infinite alternate;
     }
 
     .logo img {
