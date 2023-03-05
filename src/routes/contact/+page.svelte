@@ -3,6 +3,7 @@
     import InputText from '../../components/InputText.svelte'
     import InputTextArea from '../../components/InputTextArea.svelte'
     import Button from '../../components/Button.svelte'
+    import LoadingSpinner from '../../components/LoadingSpinner.svelte'
 
     let email = ''
     let name = ''
@@ -25,7 +26,7 @@
 
 {#if $isLoading}
 
-    <p>Loading...</p>
+    <LoadingSpinner />
 
 {:else if $error !== null}
 

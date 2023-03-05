@@ -1,12 +1,13 @@
 <script>
     import useGet from '../../utils/useGet.ts'
+    import LoadingSpinner from '../../components/LoadingSpinner.svelte'
 
     const { data, error, isLoading } = useGet('https://staging.api.looneytunez.de/repertoire/published')
 </script>
 
 {#if $isLoading}
 
-    <p>Loading...</p>
+    <LoadingSpinner />
 
 {:else if $error !== null}
 

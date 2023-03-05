@@ -1,1 +1,5 @@
-<h2>REFERENCES</h2>
+<script>
+    import LoadingSpinner from '../../components/LoadingSpinner.svelte'
+</script>
+
+<LoadingSpinner />

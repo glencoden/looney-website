@@ -21,6 +21,7 @@
     --nav-height: 80px;
     --nav-top: none;
     --nav-bottom: 0;
+    --logo-width: min(380px, 24vw);
 
     --level-1: 10;
     --level-2: 100;

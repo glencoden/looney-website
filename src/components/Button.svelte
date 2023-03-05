@@ -43,17 +43,15 @@
         transition: transform 0.1s ease;
     }
 
-    button:hover {
+    .button:hover {
         transform: scale(1.05);
     }
 
-    button:active {
+    .button:active {
         transform: scale(1);
-        color: var(--white);
-        animation: flicker 1.5s infinite alternate;
     }
 
-    .button-active {
+    .button:hover, .button:active, .button-active {
         color: var(--white);
         animation: flicker 1.5s infinite alternate;
     }

@@ -13,7 +13,7 @@
 
 <div class="logo">
     <a href='/'>
-        <img class="logo-shadow" src="logo-black.png" alt="black">
+        <img class="logo-shadow" src="logo-white.png" alt="black">
         <img class="logo-image" src="logo.png" alt="black">
     </a>
 </div>
@@ -71,7 +71,7 @@
     }
 
     .logo img {
-        width: 400px;
+        width: var(--logo-width);
     }
 
     .navigation, .navigation-background {
