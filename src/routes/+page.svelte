@@ -1,10 +1,26 @@
-<div class="video-box">
+<script>
+    import LoadingSpinner from '../components/LoadingSpinner.svelte'
+
+    let showVideo = false
+
+    const onVideoReady = () => {
+        showVideo = true
+    }
+</script>
+
+<LoadingSpinner />
+
+<div
+    class="video-box"
+    class:show-video={showVideo}
+>
     <video
         class="video"
         src='teaser-1v5.m4v'
         autoplay
         muted
         loop
+        on:canplay={onVideoReady}
     >
     </video>
 </div>
@@ -25,7 +41,6 @@
     }
 
     .video-box {
-        animation: slide-in 0.7s ease;
         position: fixed;
         left: 50%;
         top: var(--nav-height);
@@ -33,6 +48,12 @@
         display: flex;
         align-items: center;
         height: min(calc(100vh - var(--nav-height)), 960px);
+        opacity: 0;
+    }
+
+    .show-video {
+        animation: slide-in 0.7s ease;
+        opacity: 1;
     }
 
     .video {

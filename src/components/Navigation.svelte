@@ -1,4 +1,6 @@
 <script>
+    import { onMount } from 'svelte';
+    // import { goto } from '$app/navigation';
     import { navigating } from '$app/stores';
     import Button from './Button.svelte'
 
@@ -7,6 +9,16 @@
     $: if($navigating) {
         currentPathname = $navigating.to.route.id
     }
+
+    onMount(() => {
+        currentPathname = location.pathname
+
+        // goto('/')
+
+        // window.addEventListener('beforeunload', () => {
+        //     //
+        // })
+    })
 </script>
 
 <div class="navigation-background"></div>
