@@ -14,6 +14,10 @@ const config = {
 			precompress: false,
 			strict: true
 		})
+	},
+	paths: {
+		base: '/looney-website'
+		// base: process.env.PREVIEW ? '/looney-website' : ''
 	}
 };
 
