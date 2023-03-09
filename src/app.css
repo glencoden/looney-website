@@ -21,13 +21,15 @@
     --nav-height: 80px;
     --nav-top: none;
     --nav-bottom: 0;
-    --logo-width: min(380px, 24vw);
+    --logo-width: min(380px, 21vw);
 
     --level-1: 10;
     --level-2: 100;
     --level-3: 1000;
 
     --main-content-width: 600px;
+    --max-content-with: 1960px;
+    --screen-side: max(calc((100vw - var(--max-content-with)) / 2), 0px);
     --video-width: auto;
     --video-height: calc(100vh - 2 * var(--nav-height));
 }

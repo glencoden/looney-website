@@ -1,9 +1,28 @@
 <script>
+    const logos = [
+        'benz.png',
+        'berlin.png',
+        'bikini.png',
+        'byron.png',
+        'CT.png',
+        'digital-turbine.png',
+        'edelweiss.png',
+        'icke.jpg',
+        'levis.png',
+        'mc-fit.png',
+        'nhow.png',
+        'oooh.png',
+        'ronsons.png',
+        'soho.png',
+        'valora.png',
+        'VO.png',
+        'welldo.png',
+    ].sort(() => 0.5 - Math.random());
+
     const animations = ['slide-top', 'slide-bottom', 'slide-left', 'slide-right']
-    const logos = ['benz.png', 'berlin.png', 'bikini.png', 'byron.png', 'CT.png', 'edelweiss.png', 'icke.jpg', 'levis.png', 'mc-fit.png', 'nhow.png', 'oooh.png', 'ronsons.png', 'soho.png', 'valora.png', 'VO.png', 'welldo.png']
 
     const numColumns = 4
-    const spice = 'LOONEYTUNEZ'
+    const spice = 'LOONEYFANS'
 
     for (let i = 0; i < spice.length; i++) {
         const currentIndex = numColumns * i + Math.floor(Math.random() * numColumns)
@@ -124,6 +143,7 @@
 
     .logo-box-salt {
         font-family: "Playfair Display SC", sans-serif;
+        font-weight: 700;
         font-size: var(--font-size-l);
         color: var(--pink-dark);
         border: var(--border-width) solid var(--pink-dark);
@@ -132,6 +152,6 @@
 
     img {
         width: calc(5 * var(--padding) * 1px);
-        filter: sepia(100%);
+        filter: brightness(150%) saturate(0);
     }
 </style>

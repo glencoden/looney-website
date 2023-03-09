@@ -45,7 +45,7 @@
 
     .japanese {
         position: fixed;
-        right: 0;
+        right: var(--screen-side);
         bottom: 0;
         font-family: 'Noto Sans JP', sans-serif;
         font-weight: 900;
@@ -58,7 +58,7 @@
 
     .spotlight {
         position: fixed;
-        right: 0;
+        right: var(--screen-side);
         top: var(--nav-height);
         height: 60vh;
         filter: blur(5px);

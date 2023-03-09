@@ -84,7 +84,7 @@
     .logo {
         z-index: var(--level-3);
         position: fixed;
-        left: 0;
+        left: var(--screen-side);
         top: calc(var(--padding) * 1px);
         display: flex;
         justify-content: center;
