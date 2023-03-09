@@ -6,11 +6,17 @@
 <div class="viewport">
     <h1 class="hidden-headline">Live Rock Karaoke</h1>
 
-    <Navigation />
+    <video
+            class="hidden-video-element"
+            src='teaser-1v5.m4v'
+    >
+    </video>
 
     <img class="spotlight" src="city.svg" alt="spotlight">
 
     <h2 class="japanese">ライブ❤カラオケ!</h2>
+
+    <Navigation />
 
     <div class="main-content">
         <div class="vertical-spacer"></div>
@@ -28,10 +34,18 @@
         user-select: none;
     }
 
+    .hidden-video-element {
+        position: fixed;
+        opacity: 0;
+        user-select: none;
+        width: 100px;
+    }
+
     .viewport {
         display: flex;
         justify-content: center;
         width: 100vw;
+        overflow: hidden;
     }
 
     .main-content {
@@ -54,13 +68,14 @@
         color: var(--white);
         filter: blur(5px);
         opacity: 0.8;
+        white-space: nowrap;
     }
 
     .spotlight {
         position: fixed;
         right: var(--screen-side);
         top: var(--nav-height);
-        height: 60vh;
+        height: 60vmin;
         filter: blur(5px);
         opacity: 0.8;
     }

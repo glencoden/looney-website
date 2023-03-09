@@ -125,14 +125,14 @@
     .navigation, .navigation-background {
         z-index: var(--level-3);
         position: fixed;
-        left: 50%;
+        left: var(--nav-left);
         top: var(--nav-top);
         bottom: var(--nav-bottom);
         transform: translateX(-50%);
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: calc(2 * var(--padding) * 1px);
+        gap: var(--nav-gap);
         height: var(--nav-height);
     }
 

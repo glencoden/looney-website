@@ -14,15 +14,17 @@
     class="video-box"
     class:show-video={showVideo}
 >
-    <video
-        class="video"
-        src='teaser-1v5.m4v'
-        autoplay
-        muted
-        loop
-        on:canplay={onVideoReady}
-    >
-    </video>
+    <div class="video">
+        <video
+                class="video-element"
+                src='teaser-1v5.m4v'
+                autoplay
+                muted
+                loop
+                on:canplay={onVideoReady}
+        >
+        </video>
+    </div>
 </div>
 
 <style>
@@ -46,6 +48,7 @@
         top: var(--nav-height);
         transform: translateX(-50%);
         display: flex;
+        justify-content: center;
         align-items: center;
         height: min(calc(100vh - var(--nav-height)), 960px);
         opacity: 0;
@@ -58,8 +61,13 @@
 
     .video {
         position: relative;
+        width: var(--video-width);
+        padding: 0 calc(var(--padding) * 1px);
+    }
+
+    .video-element {
+        width: 100%;
         border: var(--border-width) solid var(--pink-dark);
         border-radius: var(--boder-radius);
-        width: var(--video-width);
     }
 </style>

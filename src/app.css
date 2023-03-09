@@ -11,6 +11,7 @@
     --font-color: var(--black);
 
     --font-size-m: 18px;
+    --font-size-mm: 24px;
     --font-size-l: 30px;
 
     --padding: 20; /* number for calculations */
@@ -19,9 +20,12 @@
     --box-shadow: calc(0.4 * var(--padding) * 1px) calc(0.4 * var(--padding) * 1px) 0 0 var(--black);
 
     --nav-height: 80px;
+    --nav-left: 60%;
     --nav-top: none;
     --nav-bottom: 0;
+    --nav-gap: calc(0.5 * var(--padding) * 1px);
     --logo-width: min(380px, 21vw);
+    --button-font-size: var(--font-size-m);
 
     --level-1: 10;
     --level-2: 100;
@@ -37,11 +41,28 @@
 @media only screen and (min-width: 600px) {
     :root {
         --nav-height: min(160px, 16vh);
+        --nav-left: 60%;
         --nav-top: 0;
         --nav-bottom: none;
+        --nav-gap: calc(1 * var(--padding) * 1px);
 
         --video-width: min(1280px, 100vw);
         --video-height: auto;
+    }
+}
+
+@media only screen and (min-width: 1040px) {
+    :root {
+        --nav-left: 55%;
+        --nav-gap: calc(2 * var(--padding) * 1px);
+        --button-font-size: var(--font-size-mm);
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    :root {
+        --nav-left: 50%;
+        --button-font-size: var(--font-size-l);
     }
 }
 
