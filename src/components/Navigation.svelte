@@ -84,7 +84,7 @@
     .logo {
         z-index: var(--level-3);
         position: fixed;
-        left: var(--screen-side);
+        left: var(--logo-left);
         top: calc(var(--padding) * 1px);
         display: flex;
         justify-content: center;
@@ -137,7 +137,9 @@
     }
 
     .navigation-background {
+        z-index: var(--level-2);
         width: 120vw;
+        height: var(--nav-bg-height);
         background-color: var(--bg-color);
     }
 </style>

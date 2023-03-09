@@ -54,7 +54,7 @@
         font-family: Poppins, sans-serif;
         font-size: var(--button-font-size);
         font-weight: 600;
-        padding: calc(var(--padding) * 1px);
+        padding: var(--button-padding);
         border: var(--border-width) solid var(--black);
         box-shadow: var(--box-shadow);
         overflow: hidden;

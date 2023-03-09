@@ -12,9 +12,19 @@
     >
     </video>
 
-    <img class="spotlight" src="city.svg" alt="spotlight">
+    <img class="city" src="city.svg" alt="city">
 
-    <h2 class="japanese">ライブ❤カラオケ!</h2>
+    <h2 class="japanese">
+        <span>ラ</span>
+        <span>イ</span>
+        <span>ブ</span>
+        <span>❤</span>
+        <span>カ</span>
+        <span>ラ</span>
+        <span>オ</span>
+        <span>ケ</span>
+        <span>!</span>
+    </h2>
 
     <Navigation />
 
@@ -58,25 +68,41 @@
     }
 
     .japanese {
-        position: fixed;
-        right: var(--screen-side);
-        bottom: 0;
-        font-family: 'Noto Sans JP', sans-serif;
-        font-weight: 900;
-        font-size: 172px;
-        margin: 0;
-        color: var(--white);
-        filter: blur(5px);
-        opacity: 0.8;
-        white-space: nowrap;
+        display: none;
     }
 
-    .spotlight {
+    .city {
         position: fixed;
-        right: var(--screen-side);
-        top: var(--nav-height);
+        left: var(--screen-side);
+        bottom: var(--nav-height);
+        right: auto;
+        top: auto;
         height: 60vmin;
-        filter: blur(5px);
+        filter: var(--bg-item-filter);
         opacity: 0.8;
+    }
+
+    @media only screen and (min-width: 600px) {
+        .japanese {
+            display: flex;
+            position: fixed;
+            right: var(--screen-side);
+            bottom: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 900;
+            font-size: 172px;
+            margin: 0;
+            color: var(--white);
+            filter: var(--bg-item-filter);
+            opacity: 0.8;
+        }
+
+        .city {
+            left: auto;
+            bottom: auto;
+            right: var(--screen-side);
+            top: var(--nav-height);
+            height: 60vmin;
+        }
     }
 </style>

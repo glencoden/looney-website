@@ -43,6 +43,7 @@
     }
 
     .video-box {
+        z-index: var(--level-2);
         position: fixed;
         left: 50%;
         top: var(--nav-height);
@@ -50,7 +51,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: min(calc(100vh - var(--nav-height)), 960px);
+        height: var(--video-height);
         opacity: 0;
     }
 

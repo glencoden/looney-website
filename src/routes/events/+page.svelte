@@ -121,7 +121,7 @@
     }
 
     .event-box p {
-        white-space: nowrap;
+        white-space: var(--list-whitespace);
         font-size: var(--font-size-m);
         margin: calc(0.5 * var(--padding) * 1px) 0;
     }

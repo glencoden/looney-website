@@ -127,17 +127,17 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         width: 100%;
-        margin: calc(-0.5 * var(--padding) * 1px);
+        margin: calc(-1 * var(--reference-tile-margin));
     }
 
     .logo-box {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: calc(7 * var(--padding) * 1px);
-        height: calc(7 * var(--padding) * 1px);
+        width: var(--reference-tile-size);
+        height: var(--reference-tile-size);
         background-color: var(--black);
-        margin: calc(0.5 * var(--padding) * 1px);
+        margin: var(--reference-tile-margin);
         overflow: hidden;
     }
 
@@ -151,7 +151,7 @@
     }
 
     img {
-        width: calc(5 * var(--padding) * 1px);
+        width: calc(var(--reference-tile-size) * 5 / 7);
         filter: brightness(150%) saturate(0);
     }
 </style>
