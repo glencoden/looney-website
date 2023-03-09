@@ -14,7 +14,7 @@ const config = {
 			precompress: false,
 			strict: true
 		}),
-		paths: { base: '/looney-website' },
+		paths: { base: process.env.PUBLIC_URL },
 	}
 };
 
