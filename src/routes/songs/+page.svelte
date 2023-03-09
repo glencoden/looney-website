@@ -23,7 +23,7 @@
         {#if song.artist.length > 0 && song.title.length > 0}
 
             <div class="song-box">
-                <p class="artist-name">{song.artist}</p><p>{song.title}</p>
+                <p class="artist-name">{song.artist}</p><p class="song-title">{song.title}</p>
             </div>
 
         {/if}
@@ -32,6 +32,34 @@
 {/if}
 
 <style>
+    @keyframes slide-left {
+        0% {
+            transform: translateX(-100vw);
+        }
+
+        25% {
+            transform: translateX(-100vw);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slide-right {
+        0% {
+            transform: translateX(100vw);
+        }
+
+        25% {
+            transform: translateX(100vw);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
     .song-box {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -48,5 +76,10 @@
         font-family: "Playfair Display SC", sans-serif;
         font-weight: 700;
         color: var(--pink);
+        animation: slide-left 0.6s ease;
+    }
+
+    .song-title {
+        animation: slide-right 0.6s ease;
     }
 </style>
