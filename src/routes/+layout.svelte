@@ -1,18 +1,19 @@
 <script>
-    import '../app.css'
+    import { base } from '$app/paths';
     import Navigation from '../components/Navigation.svelte'
+    import '../app.css'
 </script>
 
 <div class="viewport">
     <h1 class="hidden-headline">Live Rock Karaoke</h1>
 
     <video
-            class="hidden-video-element"
-            src='teaser-1v5.m4v'
+        class="hidden-video-element"
+        src='{base}/teaser-1v5.m4v'
     >
     </video>
 
-    <img class="city" src="city.svg" alt="city">
+    <img class="city" src="{base}/city.svg" alt="city">
 
     <h2 class="japanese">
         <span>ラ</span>

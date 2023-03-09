@@ -1,7 +1,8 @@
 <script>
-    import { onMount } from 'svelte';
-    // import { goto } from '$app/navigation';
+    import { base } from '$app/paths';
     import { navigating } from '$app/stores';
+    // import { goto } from '$app/navigation';
+    import { onMount } from 'svelte';
     import Button from './Button.svelte'
 
     let currentPathname = ''
@@ -24,46 +25,46 @@
 <div class="navigation-background"></div>
 
 <div class="logo">
-    <a href='/'>
+    <a href='{base}/'>
         <img
             class="logo-shadow"
-            src="logo-black.png"
+            src="{base}/logo-black.png"
             alt="black"
         >
         <img
             class="logo-image"
-            src="logo.png"
+            src="{base}/logo.png"
             alt="main"
         >
         <img
             class="logo-glow"
             class:logo-glow-active={currentPathname === '/'}
-            src="logo-white.png"
+            src="{base}/logo-white.png"
             alt="glow"
         >
     </a>
 </div>
 
 <div class="navigation">
-    <a href='/events'>
+    <a href='{base}/events'>
         <Button
             isActive={currentPathname === '/events'}
             label='Events'
         />
     </a>
-    <a href='/songs'>
+    <a href='{base}/songs'>
         <Button
             isActive={currentPathname === '/songs'}
             label='Songs'
         />
     </a>
-    <a href='/references'>
+    <a href='{base}/references'>
         <Button
             isActive={currentPathname === '/references'}
             label='References'
         />
     </a>
-    <a href='/contact'>
+    <a href='{base}/contact'>
         <Button
             isActive={currentPathname === '/contact'}
             label='Contact'

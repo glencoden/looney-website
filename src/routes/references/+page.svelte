@@ -1,4 +1,6 @@
 <script>
+    import { base } from '$app/paths';
+
     const logos = [
         'benz.png',
         'berlin.png',
@@ -42,7 +44,7 @@
             </div>
         {:else}
             <div class={`logo-box ${animations[Math.floor(Math.random() * 4)]}`}>
-                <img src={`references/${logo}`} alt={`reference ${logo}`}>
+                <img src='{base}/references/{logo}' alt={`reference ${logo}`}>
             </div>
         {/if}
 

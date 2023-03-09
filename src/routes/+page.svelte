@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     import LoadingSpinner from '../components/LoadingSpinner.svelte'
 
     let showVideo = false
@@ -16,12 +17,12 @@
 >
     <div class="video">
         <video
-                class="video-element"
-                src='teaser-1v5.m4v'
-                autoplay
-                muted
-                loop
-                on:canplay={onVideoReady}
+            class="video-element"
+            src='{base}/teaser-1v5.m4v'
+            autoplay
+            muted
+            loop
+            on:canplay={onVideoReady}
         >
         </video>
     </div>
