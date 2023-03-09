@@ -1,15 +1,32 @@
 <script>
     const animations = ['slide-top', 'slide-bottom', 'slide-left', 'slide-right']
-    const spice = 'LOONEY'
     const logos = ['benz.png', 'berlin.png', 'bikini.png', 'byron.png', 'CT.png', 'edelweiss.png', 'icke.jpg', 'levis.png', 'mc-fit.png', 'nhow.png', 'oooh.png', 'ronsons.png', 'soho.png', 'valora.png', 'VO.png', 'welldo.png']
+
+    const numColumns = 4
+    const spice = 'LOONEYTUNEZ'
+
+    for (let i = 0; i < spice.length; i++) {
+        const currentIndex = numColumns * i + Math.floor(Math.random() * numColumns)
+        if (currentIndex >= logos.length) {
+            break
+        }
+        logos.splice(currentIndex, 0, `${spice[i]}${i}`)
+    }
 </script>
 
 <div class="logos">
     {#each logos as logo (logo)}
 
-        <div class={`logo-box ${animations[Math.floor(Math.random() * 4)]}`}>
-            <img src={`references/${logo}`} alt={`reference ${logo}`}>
-        </div>
+        {#if logo.length === 2}
+            <div class={`logo-box logo-box-salt ${animations[Math.floor(Math.random() * 4)]}`}>
+                {logo.slice(0, 1)}
+            </div>
+        {:else}
+            <div class={`logo-box ${animations[Math.floor(Math.random() * 4)]}`}>
+                <img src={`references/${logo}`} alt={`reference ${logo}`}>
+            </div>
+        {/if}
+
 
     {/each}
 </div>
@@ -17,11 +34,11 @@
 <style>
     @keyframes slide-top {
         0% {
-            transform: translateY(-100vh);
+            transform: translateY(-200vh);
         }
 
         25% {
-            transform: translateY(-100vh);
+            transform: translateY(-200vh);
         }
 
         100% {
@@ -31,11 +48,11 @@
 
     @keyframes slide-bottom {
         0% {
-            transform: translateY(100vh);
+            transform: translateY(200vh);
         }
 
         25% {
-            transform: translateY(100vh);
+            transform: translateY(200vh);
         }
 
         100% {
@@ -95,16 +112,26 @@
     }
 
     .logo-box {
-        width: 140px;
-        height: 140px;
-        border: var(--border-width) solid var(--pink-dark);
-        background-color: var(--pink);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: calc(7 * var(--padding) * 1px);
+        height: calc(7 * var(--padding) * 1px);
+        background-color: var(--black);
         margin: calc(0.5 * var(--padding) * 1px);
         overflow: hidden;
     }
 
+    .logo-box-salt {
+        font-family: "Playfair Display SC", sans-serif;
+        font-size: var(--font-size-l);
+        color: var(--pink-dark);
+        border: var(--border-width) solid var(--pink-dark);
+        background-color: var(--pink);
+    }
+
     img {
-        width: 140px;
+        width: calc(5 * var(--padding) * 1px);
         filter: sepia(100%);
     }
 </style>
