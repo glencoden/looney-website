@@ -14,7 +14,11 @@ const config = {
 			precompress: false,
 			strict: true
 		}),
-		paths: { base: process.env.PUBLIC_URL },
+		paths: {
+			base: process.env.NODE_ENV === 'development'
+				? '/looney-website'
+				: '/'
+		},
 	}
 };
 
