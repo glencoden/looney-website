@@ -7,7 +7,7 @@
 
     const animations = ['slide-top', 'slide-bottom', 'slide-left', 'slide-right']
 
-    const { data, error, isLoading } = useGet('https://staging.api.looneytunez.de/calendar/events')
+    const { data, error, isLoading } = useGet('https://api.looneytunez.de/calendar/events')
 </script>
 
 {#if $isLoading}
