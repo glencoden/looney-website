@@ -5,7 +5,7 @@
     import { onMount } from 'svelte';
     import Button from './Button.svelte'
 
-    let currentPathname = ''
+    let currentPathname = 'none'
 
     $: if($navigating) {
         currentPathname = $navigating.to.route.id
