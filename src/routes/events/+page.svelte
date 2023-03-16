@@ -117,6 +117,7 @@
     .event-box {
         display: grid;
         grid-template-columns: 1fr 1fr 2fr;
+        grid-gap: calc(var(--padding) * 1px);
         width: 100%;
     }
 
@@ -127,8 +128,8 @@
     }
 
     .venue {
-        font-family: "Playfair Display SC", sans-serif;
-        font-weight: 700;
+        font-family: 'Pacifico', serif;
+        font-size: var(--font-size-xm);
         color: var(--pink);
     }
 </style>

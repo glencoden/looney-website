@@ -131,8 +131,8 @@
     }
 
     p {
-        font-family: "Playfair Display SC", sans-serif;
-        font-weight: 700;
+        font-family: 'Pacifico', serif;
+        font-size: var(--font-size-xm);
     }
 
     .info {

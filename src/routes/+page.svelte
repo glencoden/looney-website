@@ -9,7 +9,9 @@
     }
 </script>
 
-<LoadingSpinner />
+{#if !showVideo}
+    <LoadingSpinner />
+{/if}
 
 <div
     class="video-box"

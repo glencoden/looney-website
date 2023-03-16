@@ -68,18 +68,19 @@
 
     .song-box p {
         white-space: var(--list-whitespace);
-        font-size: var(--font-size-m);
+        align-self: center;
         margin: calc(0.25 * var(--padding) * 1px) 0;
     }
 
     .artist-name {
-        font-family: "Playfair Display SC", sans-serif;
-        font-weight: 700;
+        font-family: "Pacifico", serif;
+        font-size: var(--font-size-xm);
         color: var(--pink);
         animation: slide-left 0.6s ease;
     }
 
     .song-title {
+        font-size: var(--font-size-m);
         animation: slide-right 0.6s ease;
     }
 </style>

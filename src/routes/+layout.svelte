@@ -15,17 +15,7 @@
 
     <img class="city" src="{base}/city.svg" alt="city">
 
-    <h2 class="japanese">
-        <span>ラ</span>
-        <span>イ</span>
-        <span>ブ</span>
-        <span>❤</span>
-        <span>カ</span>
-        <span>ラ</span>
-        <span>オ</span>
-        <span>ケ</span>
-        <span>!</span>
-    </h2>
+    <h2 class="japanese">ライブ❤カラオケ!</h2>
 
     <Navigation />
 

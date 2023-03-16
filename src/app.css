@@ -11,7 +11,7 @@
     --font-color: var(--black);
 
     --font-size-m: 16px;
-    --font-size-mm: 24px;
+    --font-size-xm: 20px;
     --font-size-l: 30px;
 
     --padding: 20; /* number for calculations */
@@ -37,8 +37,8 @@
     --main-content-width: 95vw;
     --max-content-with: 1960px;
     --screen-side: max(calc((100vw - var(--max-content-with)) / 2), 0px);
-    --video-width: 500px;
-    --video-height: calc(100vh - 3 * var(--nav-height));
+    --video-width: min(1280px, 100vw);
+    --video-height: min(calc(100vh - var(--nav-height)), 960px);
     --list-whitespace: wrap;
     --bg-item-filter: blur(2px);
     --reference-tile-size: calc(4 * var(--padding) * 1px);
@@ -48,6 +48,7 @@
 @media only screen and (min-width: 600px) {
     :root {
         --font-size-m: 18px;
+        --font-size-xm: 24px;
 
         --nav-height: min(160px, 21vh);
         --nav-bg-height: var(--nav-height);
@@ -60,8 +61,6 @@
         --button-padding: calc(var(--padding) * 1px);
 
         --main-content-width: 600px;
-        --video-width: min(1280px, 100vw);
-        --video-height: min(calc(100vh - var(--nav-height)), 960px);;
         --list-whitespace: nowrap;
         --bg-item-filter: blur(5px);
         --reference-tile-size: calc(7 * var(--padding) * 1px);
@@ -73,7 +72,7 @@
     :root {
         --nav-left: 55%;
         --nav-gap: calc(2 * var(--padding) * 1px);
-        --button-font-size: var(--font-size-mm);
+        --button-font-size: var(--font-size-xm);
     }
 }
 

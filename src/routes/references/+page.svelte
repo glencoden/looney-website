@@ -16,6 +16,7 @@
         'oooh.png',
         'ronsons.png',
         'soho.png',
+        'spreespeicher.png',
         'valora.png',
         'VO.png',
         'welldo.png',
@@ -24,7 +25,7 @@
     const animations = ['slide-top', 'slide-bottom', 'slide-left', 'slide-right']
 
     const numColumns = 4
-    const spice = 'LOONEYFANS'
+    const spice = 'ライブ❤カラオケ!'
 
     for (let i = 0; i < spice.length; i++) {
         const currentIndex = numColumns * i + Math.floor(Math.random() * numColumns)
@@ -144,8 +145,8 @@
     }
 
     .logo-box-salt {
-        font-family: "Playfair Display SC", sans-serif;
-        font-weight: 700;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 900;
         font-size: var(--font-size-l);
         color: var(--pink-dark);
         border: var(--border-width) solid var(--pink-dark);

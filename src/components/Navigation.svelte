@@ -137,6 +137,10 @@
         height: var(--nav-height);
     }
 
+    .navigation {
+        max-width: 100vw;
+    }
+
     .navigation-background {
         z-index: var(--level-2);
         width: 120vw;
