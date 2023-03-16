@@ -5,14 +5,20 @@
     import { onMount } from 'svelte';
     import Button from './Button.svelte'
 
-    let currentPathname = 'none'
+    let currentPathname = ''
 
     $: if($navigating) {
         currentPathname = $navigating.to.route.id
     }
 
     onMount(() => {
-        currentPathname = location.pathname
+        const [ extracted ] = location.pathname.split('/').reverse()
+
+        if (!extracted || extracted === 'looney-website') {
+            currentPathname = '/'
+        } else {
+            currentPathname = `/${extracted}`
+        }
 
         // goto('/')
 
