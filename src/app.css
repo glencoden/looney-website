@@ -1,0 +1,105 @@
+:root {
+    --black: #000;
+    --white: #fff;
+    --blue: #0C5EF0;
+    --blue-dark: #1045A3;
+    --yellow: #F0EC00;
+    --pink: #DD137B;
+    --pink-dark: #8C2744;
+
+    --bg-color: var(--yellow);
+    --font-color: var(--black);
+
+    --font-size-m: 16px;
+    --font-size-xm: 20px;
+    --font-size-l: 30px;
+
+    --padding: 20; /* number for calculations */
+    --border-width: 4px;
+    --boder-radius: 10px;
+    --box-shadow: calc(0.4 * var(--padding) * 1px) calc(0.4 * var(--padding) * 1px) 0 0 var(--black);
+
+    --nav-height: 120px;
+    --nav-bg-height: calc(var(--nav-height) / 2);
+    --nav-left: 50%;
+    --nav-top: none;
+    --nav-bottom: 0;
+    --nav-gap: calc(0.5 * var(--padding) * 1px);
+    --logo-width: 56vw;
+    --logo-left: calc((100vw - var(--logo-width)) / 2);
+    --button-font-size: var(--font-size-m);
+    --button-padding: calc(var(--padding) * 1px) calc(0.2 * var(--padding) * 1px);
+
+    --level-1: 10;
+    --level-2: 100;
+    --level-3: 1000;
+
+    --main-content-width: 95vw;
+    --max-content-with: 1960px;
+    --screen-side: max(calc((100vw - var(--max-content-with)) / 2), 0px);
+    --video-width: min(1280px, 100vw);
+    --video-height: min(calc(100vh - var(--nav-height)), 960px);
+    --list-whitespace: wrap;
+    --bg-item-filter: blur(2px);
+    --reference-tile-size: calc(4 * var(--padding) * 1px);
+    --reference-tile-margin: calc(0.2 * var(--padding) * 1px);
+}
+
+@media only screen and (min-width: 600px) {
+    :root {
+        --font-size-m: 18px;
+        --font-size-xm: 24px;
+
+        --nav-height: min(160px, 21vh);
+        --nav-bg-height: var(--nav-height);
+        --nav-left: 60%;
+        --nav-top: 0;
+        --nav-bottom: none;
+        --nav-gap: calc(1 * var(--padding) * 1px);
+        --logo-width: min(380px, 21vw);
+        --logo-left: var(--screen-side);
+        --button-padding: calc(var(--padding) * 1px);
+
+        --main-content-width: 600px;
+        --list-whitespace: nowrap;
+        --bg-item-filter: blur(5px);
+        --reference-tile-size: calc(7 * var(--padding) * 1px);
+        --reference-tile-margin: calc(0.5 * var(--padding) * 1px);
+    }
+}
+
+@media only screen and (min-width: 1040px) {
+    :root {
+        --nav-left: 55%;
+        --nav-gap: calc(2 * var(--padding) * 1px);
+        --button-font-size: var(--font-size-xm);
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    :root {
+        --nav-left: 50%;
+        --button-font-size: var(--font-size-l);
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    color: var(--font-color);
+    background-color: var(--bg-color);
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0;
+    border: none;
+    color: var(--font-color);
+    background-color: transparent;
+}

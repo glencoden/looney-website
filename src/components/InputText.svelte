@@ -1,12 +1,22 @@
 <script>
-    let inputElement
-
-    let name = 'type here'
-    $: console.log('name', name)
-
-    let value = 'magic time'
-    $: console.log('value', value, inputElement)
+    let field
+    export let value
 </script>
 
-<input bind:value={name}>
-<input id='hello' bind:value bind:this={inputElement}>
+<input
+    class="input"
+    bind:value
+    bind:this={field}
+    on:focus={() => value = ''}
+/>
+
+<style>
+    .input {
+        width: 100%;
+        padding: calc(0.5 * var(--padding) * 1px);
+        border: var(--border-width) solid var(--black);
+        font-family: Poppins, sans-serif;
+        font-size: var(--font-size-m);
+        outline: none;
+    }
+</style>
