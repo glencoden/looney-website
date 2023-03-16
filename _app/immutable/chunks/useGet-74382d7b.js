@@ -1,0 +1,1 @@
+import{w as n}from"./index-9dcb087d.js";function l(a){const o=n(null),e=n(null),s=n(!1);async function r(){e.set(null),s.set(!0);try{const t=await fetch(a);o.set(await t.json())}catch(t){e.set(typeof t=="object"?t:{err:t})}s.set(!1)}return r(),{data:o,error:e,isLoading:s,refetch:r}}export{l as u};
