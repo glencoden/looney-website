@@ -42,7 +42,7 @@
             page: 'looneys', // identify this website to serverless contact form
         })
             .then(() => {
-                showMessage('Your message has been send!', 15)
+                showMessage('Your message has been sent!', 15)
 
                 email = ''
                 name = ''

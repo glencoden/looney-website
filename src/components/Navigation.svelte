@@ -20,13 +20,13 @@
         }
 
         console.log(
-            `%cglencoden ❤️ version 1.0.0,
-            font-size: 1rem;
+            '%cglencoden ❤️ version 1.0.0',
+            `font-size: 1rem;
             padding: 1rem;
             margin: 1rem 0;
             border-radius: 0.5rem;
             color: white;
-            background:linear-gradient(#E66465, #9198E5);`
+            background:linear-gradient(#E66465, #9198E5);`,
         )
     })
 </script>
