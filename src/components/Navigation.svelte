@@ -1,7 +1,7 @@
 <script>
+    import { onMount } from 'svelte';
     import { base } from '$app/paths';
     import { navigating } from '$app/stores';
-    import { onMount } from 'svelte';
     import Button from './Button.svelte'
 
     let currentPathname = ''
@@ -18,16 +18,6 @@
         } else {
             currentPathname = `/${extracted}`
         }
-
-        console.log(
-            '%cglencoden ❤️ version 1.0.0',
-            `font-size: 1rem;
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 0.5rem;
-            color: white;
-            background:linear-gradient(#E66465, #9198E5);`,
-        )
     })
 </script>
 
