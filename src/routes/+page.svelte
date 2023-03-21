@@ -24,6 +24,7 @@
             autoplay
             muted
             loop
+            controls
             on:canplay={onVideoReady}
         >
         </video>
