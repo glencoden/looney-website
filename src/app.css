@@ -37,8 +37,10 @@
     --main-content-width: 95vw;
     --max-content-with: 1960px;
     --screen-side: max(calc((100vw - var(--max-content-with)) / 2), 0px);
+    --video-top: 0;
     --video-width: min(1280px, 100vw);
-    --video-height: min(calc(100vh - var(--nav-height)), 960px);
+    --video-height: 100vh;
+    --video-padding: 0 calc(0.5 * var(--padding) * 1px);
     --list-whitespace: wrap;
     --bg-item-filter: blur(2px);
     --reference-tile-size: calc(4 * var(--padding) * 1px);
@@ -61,6 +63,9 @@
         --button-padding: calc(var(--padding) * 1px);
 
         --main-content-width: 600px;
+        --video-top: var(--nav-height);
+        --video-height: min(calc(100vh - var(--nav-height)), 960px);
+        --video-padding: 0 calc(var(--padding) * 1px);
         --list-whitespace: nowrap;
         --bg-item-filter: blur(5px);
         --reference-tile-size: calc(7 * var(--padding) * 1px);

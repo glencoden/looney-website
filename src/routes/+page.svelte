@@ -51,7 +51,7 @@
         z-index: var(--level-2);
         position: fixed;
         left: 50%;
-        top: var(--nav-height);
+        top: var(--video-top);
         transform: translateX(-50%);
         display: flex;
         justify-content: center;
@@ -68,12 +68,13 @@
     .video {
         position: relative;
         width: var(--video-width);
-        padding: 0 calc(var(--padding) * 1px);
+        padding: var(--video-padding);
     }
 
     .video-element {
         width: 100%;
-        border: var(--border-width) solid var(--pink-dark);
+        border: var(--border-width) solid var(--black);
         border-radius: var(--boder-radius);
+        background-color: var(--black);
     }
 </style>
