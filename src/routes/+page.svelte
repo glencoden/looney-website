@@ -22,6 +22,7 @@
             class="video-element"
             src='{base}/teaser-1v5.m4v'
             autoplay
+            playsinline
             muted
             loop
             controls
