@@ -51,6 +51,7 @@
     }
 
     .button {
+        user-select: none;
         font-family: Poppins, sans-serif;
         font-size: var(--button-font-size);
         font-weight: 600;
