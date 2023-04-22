@@ -6,7 +6,7 @@
 
     onMount(() => {
         console.log(
-            '%cglencoden ❤️ version 1.0.3',
+            '%cglencoden ❤️ version 1.1.0',
             `font-size: 1rem;
             padding: 1rem;
             margin: 1rem 0;
@@ -33,11 +33,11 @@
     <Navigation />
 
     <div class="main-content">
-        <div class="vertical-spacer"></div>
+<!--        <div class="vertical-spacer"></div>-->
 
         <slot></slot>
 
-        <div class="vertical-spacer"></div>
+<!--        <div class="vertical-spacer"></div>-->
     </div>
 </div>
 
@@ -58,7 +58,7 @@
     .viewport {
         display: flex;
         justify-content: center;
-        width: 100vw;
+        width: 100%;
         overflow: hidden;
     }
 
@@ -68,7 +68,7 @@
     }
 
     .vertical-spacer {
-        height: calc(var(--nav-height) + calc(4 * var(--padding) * 1px));
+        height: var(--vertical-spacer-height);
     }
 
     .japanese {
