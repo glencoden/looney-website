@@ -1,12 +1,24 @@
 <script>
-    import { base } from '$app/paths';
+    import { onMount, onDestroy } from 'svelte'
+    import { base } from '$app/paths'
     import LoadingSpinner from '../components/LoadingSpinner.svelte'
 
+    const SHOW_VIDEO_SAFETY_TIMEOUT = 2_000
+
+    let timeoutId
     let showVideo = false
 
     const onVideoReady = () => {
         showVideo = true
     }
+
+    onMount(() => {
+        timeoutId = setTimeout(onVideoReady, SHOW_VIDEO_SAFETY_TIMEOUT)
+    })
+
+    onDestroy(() => {
+        clearTimeout(timeoutId)
+    })
 </script>
 
 {#if !showVideo}
@@ -14,22 +26,20 @@
 {/if}
 
 <div
-    class="video-box"
-    class:show-video={showVideo}
+        class="video-box"
+        class:show-video={showVideo}
 >
-    <div class="video">
-        <video
+    <video
             class="video-element"
-            src='{base}/teaser-1v5.m4v'
+            src="{base}/teaser-1v5.m4v"
             autoplay
             playsinline
             muted
             loop
             controls
             on:canplay={onVideoReady}
-        >
-        </video>
-    </div>
+    >
+    </video>
 </div>
 
 <style>
@@ -49,26 +59,21 @@
 
     .video-box {
         z-index: var(--level-2);
-        position: fixed;
+        position: relative;
         left: 50%;
-        top: var(--video-top);
+        top: 0;
         transform: translateX(-50%);
         display: flex;
         justify-content: center;
         align-items: center;
-        height: var(--video-height);
+        width: var(--video-width);
+        margin-top: var(--video-top);
         opacity: 0;
     }
 
     .show-video {
         animation: slide-in 0.7s ease;
         opacity: 1;
-    }
-
-    .video {
-        position: relative;
-        width: var(--video-width);
-        padding: var(--video-padding);
     }
 
     .video-element {

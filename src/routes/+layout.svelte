@@ -1,12 +1,12 @@
 <script>
-    import { onMount } from 'svelte';
-    import { base } from '$app/paths';
+    import { onMount } from 'svelte'
+    import { base } from '$app/paths'
     import Navigation from '../components/Navigation.svelte'
     import '../app.css'
 
     onMount(() => {
         console.log(
-            '%cglencoden ❤️ version 1.0.3',
+            '%cglencoden ❤️ version 1.1.0',
             `font-size: 1rem;
             padding: 1rem;
             margin: 1rem 0;
@@ -21,23 +21,22 @@
     <h1 class="hidden-headline">Live Rock Karaoke</h1>
 
     <video
-        class="hidden-video-element"
-        src='{base}/teaser-1v5.m4v'
+            class="hidden-video-element"
+            src="{base}/teaser-1v5.m4v"
     >
     </video>
 
     <img class="city" src="{base}/city.svg" alt="city">
 
-    <h2 class="japanese">ライブ❤カラオケ!</h2>
+    <h2 class="japanese">
+        <span class="japanese-partial">ライブ❤</span>
+        <span class="japanese-partial">カラオケ!</span>
+    </h2>
 
     <Navigation />
 
     <div class="main-content">
-        <div class="vertical-spacer"></div>
-
         <slot></slot>
-
-        <div class="vertical-spacer"></div>
     </div>
 </div>
 
@@ -58,7 +57,7 @@
     .viewport {
         display: flex;
         justify-content: center;
-        width: 100vw;
+        width: 100%;
         overflow: hidden;
     }
 
@@ -67,12 +66,12 @@
         width: var(--main-content-width);
     }
 
-    .vertical-spacer {
-        height: calc(var(--nav-height) + calc(4 * var(--padding) * 1px));
-    }
-
     .japanese {
         display: none;
+    }
+
+    .japanese-partial {
+        white-space: nowrap;
     }
 
     .city {
@@ -88,7 +87,7 @@
 
     @media only screen and (min-width: 600px) {
         .japanese {
-            display: flex;
+            display: block;
             position: fixed;
             right: var(--screen-side);
             bottom: 0;

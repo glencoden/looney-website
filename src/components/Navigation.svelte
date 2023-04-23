@@ -45,25 +45,37 @@
 </div>
 
 <div class="navigation">
-    <a href='{base}/events'>
+    <a
+        href="{base}/events"
+        class="nav-item nav-item-0"
+    >
         <Button
             isActive={currentPathname === '/events'}
             label='Events'
         />
     </a>
-    <a href='{base}/songs'>
+    <a
+        href="{base}/songs"
+        class="nav-item nav-item-1"
+    >
         <Button
             isActive={currentPathname === '/songs'}
             label='Songs'
         />
     </a>
-    <a href='{base}/references'>
+    <a
+        href="{base}/references"
+        class="nav-item nav-item-2"
+    >
         <Button
             isActive={currentPathname === '/references'}
             label='References'
         />
     </a>
-    <a href='{base}/contact'>
+    <a
+        href="{base}/contact"
+        class="nav-item nav-item-3"
+    >
         <Button
             isActive={currentPathname === '/contact'}
             label='Contact'
@@ -145,5 +157,25 @@
         width: 120vw;
         height: var(--nav-bg-height);
         background-color: var(--bg-color);
+    }
+
+    .nav-item {
+        position: relative;
+    }
+
+    .nav-item-0 {
+        top: -1%;
+    }
+
+    .nav-item-1 {
+        top: 1%;
+    }
+
+    .nav-item-2 {
+        top: -2%;
+    }
+
+    .nav-item-3 {
+        top: 1%;
     }
 </style>

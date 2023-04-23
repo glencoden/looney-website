@@ -5,6 +5,7 @@
     import Button from '../../components/Button.svelte'
     import LoadingSpinner from '../../components/LoadingSpinner.svelte'
     import { isEmail } from './helpers/is-email'
+    import VerticalSpacer from '../../components/VerticalSpacer.svelte'
 
     let email = ''
     let name = ''
@@ -51,6 +52,8 @@
     }
 </script>
 
+<VerticalSpacer />
+
 {#if $isLoading}
 
     <LoadingSpinner />
@@ -81,9 +84,9 @@
 
         <div class="button-box">
             <Button
-                label="submit"
-                secondary={true}
-                onClick={onSubmit}
+                    label="submit"
+                    secondary={true}
+                    onClick={onSubmit}
             />
         </div>
     {:else}
@@ -91,6 +94,8 @@
     {/if}
 
 {/if}
+
+<VerticalSpacer />
 
 <style>
     @keyframes slide-top {

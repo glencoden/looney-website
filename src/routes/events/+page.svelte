@@ -3,12 +3,15 @@
     import { de, enUS } from 'date-fns/locale/index'
     import useGet from '../../utils/useGet.ts'
     import LoadingSpinner from '../../components/LoadingSpinner.svelte'
+    import VerticalSpacer from '../../components/VerticalSpacer.svelte'
 
 
-    const animations = ['slide-top', 'slide-bottom', 'slide-left', 'slide-right']
+    const animations = [ 'slide-top', 'slide-bottom', 'slide-left', 'slide-right' ]
 
     const { data, error, isLoading } = useGet('https://api.looneytunez.de/calendar/events')
 </script>
+
+<VerticalSpacer />
 
 {#if $isLoading}
 
@@ -40,6 +43,8 @@
 
     {/each}
 {/if}
+
+<VerticalSpacer />
 
 <style>
     @keyframes slide-top {

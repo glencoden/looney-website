@@ -1,5 +1,6 @@
 <script>
-    import { base } from '$app/paths';
+    import { base } from '$app/paths'
+    import VerticalSpacer from '../../components/VerticalSpacer.svelte'
 
     const logos = [
         'benz.png',
@@ -20,9 +21,9 @@
         'valora.png',
         'VO.png',
         'welldo.png',
-    ].sort(() => 0.5 - Math.random());
+    ].sort(() => 0.5 - Math.random())
 
-    const animations = ['slide-top', 'slide-bottom', 'slide-left', 'slide-right']
+    const animations = [ 'slide-top', 'slide-bottom', 'slide-left', 'slide-right' ]
 
     const numColumns = 4
     const spice = 'ライブ❤カラオケ!'
@@ -36,6 +37,8 @@
     }
 </script>
 
+<VerticalSpacer />
+
 <div class="logos">
     {#each logos as logo (logo)}
 
@@ -45,13 +48,15 @@
             </div>
         {:else}
             <div class={`logo-box ${animations[Math.floor(Math.random() * 4)]}`}>
-                <img src='{base}/references/{logo}' alt={`reference ${logo}`}>
+                <img src="{base}/references/{logo}" alt={`reference ${logo}`}>
             </div>
         {/if}
 
 
     {/each}
 </div>
+
+<VerticalSpacer />
 
 <style>
     @keyframes slide-top {
