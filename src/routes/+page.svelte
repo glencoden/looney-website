@@ -1,9 +1,9 @@
 <script>
-    import { onMount, onDestroy } from 'svelte';
-    import { base } from '$app/paths';
+    import { onMount, onDestroy } from 'svelte'
+    import { base } from '$app/paths'
     import LoadingSpinner from '../components/LoadingSpinner.svelte'
 
-    const SHOW_VIDEO_SAFETY_TIMEOUT = 2500
+    const SHOW_VIDEO_SAFETY_TIMEOUT = 2_000
 
     let timeoutId
     let showVideo = false
@@ -26,18 +26,18 @@
 {/if}
 
 <div
-    class="video-box"
-    class:show-video={showVideo}
+        class="video-box"
+        class:show-video={showVideo}
 >
     <video
-        class="video-element"
-        src='{base}/teaser-1v5.m4v'
-        autoplay
-        playsinline
-        muted
-        loop
-        controls
-        on:canplay={onVideoReady}
+            class="video-element"
+            src="{base}/teaser-1v5.m4v"
+            autoplay
+            playsinline
+            muted
+            loop
+            controls
+            on:canplay={onVideoReady}
     >
     </video>
 </div>

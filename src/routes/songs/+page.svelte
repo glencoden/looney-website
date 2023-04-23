@@ -1,9 +1,12 @@
 <script>
     import useGet from '../../utils/useGet.ts'
     import LoadingSpinner from '../../components/LoadingSpinner.svelte'
+    import VerticalSpacer from '../../components/VerticalSpacer.svelte'
 
     const { data, error, isLoading } = useGet('https://api.looneytunez.de/repertoire/published')
 </script>
+
+<VerticalSpacer />
 
 {#if $isLoading}
 
@@ -23,13 +26,16 @@
         {#if song.artist.length > 0 && song.title.length > 0}
 
             <div class="song-box">
-                <p class="artist-name">{song.artist}</p><p class="song-title">{song.title}</p>
+                <p class="artist-name">{song.artist}</p>
+                <p class="song-title">{song.title}</p>
             </div>
 
         {/if}
     {/each}
 
 {/if}
+
+<VerticalSpacer />
 
 <style>
     @keyframes slide-left {
