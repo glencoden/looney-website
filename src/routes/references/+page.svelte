@@ -48,10 +48,9 @@
             </div>
         {:else}
             <div class={`logo-box ${animations[Math.floor(Math.random() * 4)]}`}>
-                <img src="{base}/references/{logo}" alt={`reference ${logo}`}>
+                <img src="{base}/images/{logo}" alt={`reference ${logo}`}>
             </div>
         {/if}
-
 
     {/each}
 </div>
