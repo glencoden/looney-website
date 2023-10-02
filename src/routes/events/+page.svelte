@@ -1,6 +1,6 @@
 <script>
     import formatRelative from 'date-fns/formatRelative/index'
-    import { de, enUS } from 'date-fns/locale'
+    import { de, enUS } from 'date-fns/locale/index.js'
     import useGet from '../../utils/useGet'
     import LoadingSpinner from '../../components/LoadingSpinner.svelte'
     import VerticalSpacer from '../../components/VerticalSpacer.svelte'
