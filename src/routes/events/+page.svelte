@@ -1,7 +1,7 @@
 <script>
     import formatRelative from 'date-fns/formatRelative/index'
-    import { de, enUS } from 'date-fns/locale/index'
-    import useGet from '../../utils/useGet.ts'
+    import { de, enUS } from 'date-fns/locale'
+    import useGet from '../../utils/useGet'
     import LoadingSpinner from '../../components/LoadingSpinner.svelte'
     import VerticalSpacer from '../../components/VerticalSpacer.svelte'
 
@@ -30,14 +30,14 @@
     {#each $data.data as event (event.start)}
 
         <div class="event-box">
-            <p class={`${animations[Math.floor(Math.random() * 4)]}`}>
+            <p class={`date ${animations[Math.floor(Math.random() * 4)]}`}>
                 {formatRelative(new Date(event.start), new Date(), { locale: de })}
             </p>
-            <p class={`venue ${animations[Math.floor(Math.random() * 4)]}`}>
-                {event.venue}
-            </p>
-            <p class={`${animations[Math.floor(Math.random() * 4)]}`}>
-                {event.description}
+            <h3 class={`venue ${animations[Math.floor(Math.random() * 4)]}`}>
+                {event.venue.replace(/\s/g, '\u00a0')}
+            </h3>
+            <p class={`description ${animations[Math.floor(Math.random() * 4)]}`}>
+                {event.description || 'Looneytunez live!'}
             </p>
         </div>
 
@@ -121,20 +121,47 @@
 
     .event-box {
         display: grid;
-        grid-template-columns: 1fr 1fr 2fr;
         grid-gap: calc(var(--padding) * 1px);
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "date"
+            "venue"
+            "description";
         width: 100%;
     }
 
-    .event-box p {
+    .date {
+        grid-area: date;
+
         white-space: var(--list-whitespace);
         font-size: var(--font-size-m);
         margin: calc(0.5 * var(--padding) * 1px) 0;
     }
 
     .venue {
+        grid-area: venue;
+
+        margin: 0;
         font-family: 'Pacifico', serif;
         font-size: var(--font-size-xm);
+    }
+
+    .description {
+        grid-area: description;
+
+        white-space: var(--list-whitespace);
+        font-size: var(--font-size-m);
+        margin: 0 0 calc(var(--padding) * 1px);
         color: var(--pink);
+    }
+
+    @media only screen and (min-width: 600px) {
+        .event-box {
+            grid-template-columns: 1fr 3fr;
+            grid-template-areas:
+            "date venue"
+            "description description";
+        }
     }
 </style>
