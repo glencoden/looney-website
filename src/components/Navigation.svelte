@@ -68,7 +68,7 @@
         class="nav-item nav-item-2"
     >
         <Button
-            isActive={currentPathname === '/images'}
+            isActive={currentPathname === '/references'}
             label='References'
         />
     </a>
