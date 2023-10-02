@@ -27,14 +27,15 @@
 
 {:else}
 
-    {#each $data.data as event (event.start)}
+    {#each $data.data.reverse() as event (event.start)}
 
         <div class="event-box">
             <p class={`date ${animations[Math.floor(Math.random() * 4)]}`}>
                 {formatRelative(new Date(event.start), new Date(), { locale: de })}
+                {event.venue.split('/')[1] ? `in ${event.venue.split('/')[1].trim()}` : ''}
             </p>
             <h3 class={`venue ${animations[Math.floor(Math.random() * 4)]}`}>
-                {event.venue.replace(/\s/g, '\u00a0')}
+                {event.venue.split('/')[0].trim().replace(/\s/g, '\u00a0')}
             </h3>
             <p class={`description ${animations[Math.floor(Math.random() * 4)]}`}>
                 {event.description || 'Looneytunez live!'}
@@ -129,6 +130,7 @@
             "venue"
             "description";
         width: 100%;
+        margin-bottom: calc(2 * var(--padding) * 1px);
     }
 
     .date {
@@ -158,7 +160,7 @@
 
     @media only screen and (min-width: 600px) {
         .event-box {
-            grid-template-columns: 1fr 3fr;
+            grid-template-columns: 1fr 1fr;
             grid-template-areas:
             "date venue"
             "description description";
