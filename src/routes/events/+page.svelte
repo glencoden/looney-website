@@ -122,7 +122,7 @@
 
     .event-box {
         display: grid;
-        grid-gap: calc(var(--padding) * 1px);
+        grid-gap: calc(0.5 * var(--padding) * 1px);
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-template-areas:
@@ -137,16 +137,17 @@
         grid-area: date;
 
         white-space: var(--list-whitespace);
-        font-size: var(--font-size-m);
-        margin: calc(0.5 * var(--padding) * 1px) 0;
+        font-family: 'Pacifico', serif;
+        font-size: var(--font-size-xm);
+
+        margin: 0;
     }
 
     .venue {
         grid-area: venue;
 
-        margin: 0;
-        font-family: 'Pacifico', serif;
-        font-size: var(--font-size-xm);
+        font-size: var(--font-size-m);
+        margin: calc(0.5 * var(--padding) * 1px) 0;
     }
 
     .description {

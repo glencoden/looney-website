@@ -6,7 +6,7 @@
 
     onMount(() => {
         console.log(
-            '%cglencoden ❤️ version 1.2.0',
+            '%cglencoden ❤️ version 1.2.1',
             `font-size: 1rem;
             padding: 1rem;
             margin: 1rem 0;
