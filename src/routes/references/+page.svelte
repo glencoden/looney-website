@@ -3,25 +3,31 @@
     import VerticalSpacer from '../../components/VerticalSpacer.svelte'
 
     const logos = [
-        'benz.png',
-        'berlin.png',
-        'bikini.png',
-        'byron.png',
-        'CT.png',
-        'digital-turbine.png',
-        'edelweiss.png',
-        'icke.jpg',
+        'vice.png',
         'levis.png',
         'mc-fit.png',
+        'hilti.png',
+        'boston-consulting.png',
+        'soho.png',
+        'benz.png',
+        'normec.png',
+        'spreespeicher.png',
+        'bikini.png',
+        'berlin.png',
         'nhow.png',
+        'byron.png',
+        'digital-turbine.png',
+        'edelweiss.png',
+        'katapult.png',
+        'icke.jpg',
         'oooh.png',
         'ronsons.png',
-        'soho.png',
-        'spreespeicher.png',
+        'CT.png',
         'valora.png',
         'VO.png',
         'welldo.png',
-    ].sort(() => 0.5 - Math.random())
+    ]
+        // .sort(() => 0.5 - Math.random())
 
     const animations = [ 'slide-top', 'slide-bottom', 'slide-left', 'slide-right' ]
 

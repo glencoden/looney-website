@@ -14,7 +14,7 @@
     let info = ''
     let timeoutId = 0
 
-    const { error, isLoading, post } = usePost('https://5o2bjifmql.execute-api.us-east-1.amazonaws.com/dev/email/send')
+    const { error, isLoading, post } = usePost('https://mailer.glencoden.io')
 
     const showMessage = (input, time) => {
         info = input
