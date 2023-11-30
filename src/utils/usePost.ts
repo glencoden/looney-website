@@ -13,6 +13,7 @@ export default function (url: string) {
             const body = JSON.stringify(payload)
             const response = await fetch(url, {
                 method: 'POST',
+                headers: { 'Content-Type': 'application/json; charset=utf-8' },
                 body,
             })
             const result = await response.json()
