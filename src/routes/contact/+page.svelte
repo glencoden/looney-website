@@ -14,7 +14,9 @@
     let info = ''
     let timeoutId = 0
 
-    const contactFormUrl = window?.location.origin === 'http://localhost:5173' ? 'http://localhost:5555/contact' : 'https://rc.api.looneytunez.de/contact'
+    const contactFormUrl = (typeof window !== 'undefined' && window.location.origin === 'http://localhost:5173')
+        ? 'http://localhost:5555/contact'
+        : 'https://rc.api.looneytunez.de/contact'
 
     const { error, isLoading, post } = usePost(contactFormUrl)
 
