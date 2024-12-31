@@ -1,12 +1,12 @@
 <script>
-    import { onMount } from 'svelte'
-    import { base } from '$app/paths'
-    import Navigation from '../components/Navigation.svelte'
-    import '../app.css'
+    import { base } from '$app/paths';
+    import { onMount } from 'svelte';
+    import '../app.css';
+    import Navigation from '../components/Navigation.svelte';
 
     onMount(() => {
         console.log(
-            '%cglencoden ❤️ version 1.2.2',
+            '%cglencoden ❤️ version 1.3.0',
             `font-size: 1rem;
             padding: 1rem;
             margin: 1rem 0;
