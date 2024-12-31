@@ -1,11 +1,11 @@
 <script>
-    import usePost from '../../utils/usePost'
-    import InputText from '../../components/InputText.svelte'
-    import InputTextArea from '../../components/InputTextArea.svelte'
-    import Button from '../../components/Button.svelte'
-    import LoadingSpinner from '../../components/LoadingSpinner.svelte'
-    import { isEmail } from './helpers/is-email'
-    import VerticalSpacer from '../../components/VerticalSpacer.svelte'
+    import Button from '../../components/Button.svelte';
+    import InputText from '../../components/InputText.svelte';
+    import InputTextArea from '../../components/InputTextArea.svelte';
+    import LoadingSpinner from '../../components/LoadingSpinner.svelte';
+    import VerticalSpacer from '../../components/VerticalSpacer.svelte';
+    import usePost from '../../utils/usePost';
+    import { isEmail } from './helpers/is-email';
 
     let email = ''
     let name = ''
@@ -14,7 +14,9 @@
     let info = ''
     let timeoutId = 0
 
-    const { error, isLoading, post } = usePost('https://mailer.glencoden.io')
+    const contactFormUrl = location?.origin === 'http://localhost:5173' ? 'http://localhost:5555/contact' : 'https://rc.api.looneytunez.de/contact'
+
+    const { error, isLoading, post } = usePost(contactFormUrl)
 
     const showMessage = (input, time) => {
         info = input
@@ -39,8 +41,7 @@
         post({
             name,
             email,
-            content,
-            page: 'looneys', // identify this website to serverless contact form
+            content
         })
             .then(() => {
                 showMessage('Your message has been sent!', 15)
