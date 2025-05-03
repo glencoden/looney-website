@@ -69,29 +69,7 @@
 
 
     {#if !info}
-        <div class="input-field-box">
-            <div class="input-field">
-                <p>Name</p>
-                <InputText bind:value={name} />
-            </div>
-            <div class="input-field">
-                <p>Email</p>
-                <InputText bind:value={email} />
-            </div>
-        </div>
-
-        <div class="text-area-box">
-            <p>Message</p>
-            <InputTextArea bind:value={content} />
-        </div>
-
-        <div class="button-box">
-            <Button
-                    label="submit"
-                    secondary={true}
-                    onClick={onSubmit}
-            />
-        </div>
+        <p class="info">Please email us, we're happy to hear from you! <br> <a href="mailto:mail@liverockkaraoke.de">mail@liverockkaraoke.de</a></p>
     {:else}
         <p class="info">{info}</p>
     {/if}
@@ -141,6 +119,11 @@
     p {
         font-family: 'Pacifico', serif;
         font-size: var(--font-size-xm);
+    }
+
+    a {
+        font-family: Poppins, sans-serif;
+        font-size: var(--font-size-m);
     }
 
     .info {
