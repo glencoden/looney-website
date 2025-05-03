@@ -69,7 +69,7 @@
 
 
     {#if !info}
-        <p class="info">Please email us, we're happy to hear from you! <br><br> <a href="mailto:mail@liverockkaraoke.de">mail@liverockkaraoke.de</a></p>
+        <p class="info">Please email us, we're happy to hear from you! <br> <a href="mailto:mail@liverockkaraoke.de">mail@liverockkaraoke.de</a></p>
     {:else}
         <p class="info">{info}</p>
     {/if}
@@ -123,6 +123,7 @@
 
     a {
         font-family: Poppins, sans-serif;
+        font-size: var(--font-size-m);
     }
 
     .info {
